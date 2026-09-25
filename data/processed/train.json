@@ -1,0 +1,308 @@
+[
+  {
+    "id": "clause_0049",
+    "text": "The customer's identity was verified using an officially valid document containing both name and address, and the document was cross-checked against the issuing authority's records where feasible.",
+    "label": "Compliant",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0034",
+    "text": "For the low-risk customer, a self-certification of no change in identity or address was obtained within the prescribed ten-year updation cycle.",
+    "label": "Compliant",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0046",
+    "text": "The correspondent bank confirmed it does not permit its accounts to be used by shell banks, and this assurance was documented and retained on file.",
+    "label": "Compliant",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0069",
+    "text": "The wire transfer file references 'standard originator details' without specifying which fields were actually captured for this particular transaction.",
+    "label": "Ambiguous",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0031",
+    "text": "The high-risk customer's KYC documentation was refreshed within the two-year window as prescribed, with updated identity and address proofs obtained and verified.",
+    "label": "Compliant",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0027",
+    "text": "The account was marked medium risk at opening, but there is no record of any subsequent periodic review having taken place.",
+    "label": "Ambiguous",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0057",
+    "text": "The customer's LinkedIn profile mentioned a previous government advisory role, but it is unclear whether this was considered during onboarding screening.",
+    "label": "Ambiguous",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0065",
+    "text": "The institution's records show two consecutive periodic updation cycles were missed entirely for a medium-risk customer, with no compensating controls applied.",
+    "label": "Non-Compliant",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0014",
+    "text": "The relationship manager was aware the applicant was a former senior government official but proceeded to open the account without escalating for senior approval.",
+    "label": "Non-Compliant",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0067",
+    "text": "All cross-border wire transfers processed during the period reviewed included accurate and complete originator name, address, and account information as required.",
+    "label": "Compliant",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0008",
+    "text": "The account was opened for a corporate entity without any inquiry into its shareholding structure or ultimate beneficial owners.",
+    "label": "Non-Compliant",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0023",
+    "text": "A suspicious transaction report was drafted internally but was never actually submitted to the Financial Intelligence Unit due to a staffing oversight.",
+    "label": "Non-Compliant",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0037",
+    "text": "The domestic wire transfer of the specified amount was accompanied by complete originator information including name, address, and account number, in accordance with the applicable threshold requirement.",
+    "label": "Compliant",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0020",
+    "text": "The branch identified an unusually structured series of cash deposits just below the reporting threshold but took no further action or reported the activity.",
+    "label": "Non-Compliant",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0018",
+    "text": "A note in the file references heightened monitoring for the account but does not clarify whether this was triggered specifically by PEP status.",
+    "label": "Ambiguous",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0044",
+    "text": "The correspondent relationship was established with a bank that has no physical presence in its country of incorporation and no affiliation with any regulated financial group.",
+    "label": "Non-Compliant",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0012",
+    "text": "A beneficial ownership declaration was collected from the client but was not cross-checked against the company's own constitutive documents.",
+    "label": "Ambiguous",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0038",
+    "text": "A cross-border wire transfer was processed without any accompanying originator name or account details, and no exception applied to the transaction.",
+    "label": "Non-Compliant",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0062",
+    "text": "A customer operating in a cash-intensive sector was never reassessed for risk despite a documented change in business activity two years prior.",
+    "label": "Non-Compliant",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0063",
+    "text": "The account's risk rating appears to have been auto-generated by the system, but no human reviewer sign-off is documented in the file.",
+    "label": "Ambiguous",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0050",
+    "text": "The walk-in customer conducted a transaction exceeding the prescribed threshold without any identification being collected or recorded.",
+    "label": "Non-Compliant",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0047",
+    "text": "No due diligence was performed on the respondent institution prior to establishing the payable-through account arrangement.",
+    "label": "Non-Compliant",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0071",
+    "text": "Post-facto board approval for the correspondent relationship was never obtained, despite the arrangement having been active for over a year.",
+    "label": "Non-Compliant",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0052",
+    "text": "The listed company's shareholding was exempted from beneficial ownership verification since it is publicly traded on a recognised stock exchange, consistent with the applicable exemption.",
+    "label": "Compliant",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0055",
+    "text": "The customer was identified as an immediate family member of a serving cabinet minister, triggering enhanced due diligence procedures including verification of source of wealth.",
+    "label": "Compliant",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0043",
+    "text": "Before establishing the correspondent banking relationship, the institution gathered sufficient information on the respondent bank's ownership, AML/CFT controls, and regulatory standing, and obtained senior management approval.",
+    "label": "Compliant",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0064",
+    "text": "The low-risk customer's periodic updation review confirmed no change in identity or address, and a self-certification was obtained and filed as permitted.",
+    "label": "Compliant",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0072",
+    "text": "The correspondent banking policy references periodic reassessment of respondent institutions, but no schedule or completed reassessment could be found for this relationship.",
+    "label": "Ambiguous",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0059",
+    "text": "Multiple third-party cheques were deposited into the account followed immediately by large cash withdrawals, a pattern the branch did not escalate for review despite policy requiring it.",
+    "label": "Non-Compliant",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0016",
+    "text": "The existing customer's spouse was later identified as a politically exposed person; the relationship was continued only after documented senior management approval.",
+    "label": "Compliant",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0035",
+    "text": "The medium-risk customer's periodic updation was overdue by three years, with no evidence of any follow-up communication in the file.",
+    "label": "Non-Compliant",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0006",
+    "text": "The file references an identity check performed by a third party, but does not specify whether that third party met the regulatory criteria for reliance.",
+    "label": "Ambiguous",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0070",
+    "text": "The bank declined to proceed with a proposed correspondent relationship after due diligence revealed the prospective respondent bank had no verifiable physical presence.",
+    "label": "Compliant",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0011",
+    "text": "The partnership firm's account was activated based solely on the managing partner's identity, with no attempt made to identify other partners holding significant capital interest.",
+    "label": "Non-Compliant",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0028",
+    "text": "Risk categorisation was performed using a documented, board-approved methodology considering the customer's identity, geography, and nature of business.",
+    "label": "Compliant",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0033",
+    "text": "A periodic updation reminder was sent to the customer, but the file does not confirm whether updated documents were ever received.",
+    "label": "Ambiguous",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0053",
+    "text": "A nominee shareholder arrangement was identified for the corporate customer, but the underlying beneficial owner behind the nominee was never established.",
+    "label": "Non-Compliant",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0005",
+    "text": "No proof of address was obtained at account opening, and the branch proceeded to activate the account pending future submission.",
+    "label": "Non-Compliant",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0015",
+    "text": "The customer's occupation was listed as a mid-level government employee, but the file does not indicate whether a PEP screening was actually performed.",
+    "label": "Ambiguous",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0007",
+    "text": "The company's beneficial owners holding more than 25% controlling interest were identified by name, and their identities were independently verified through corporate registry records.",
+    "label": "Compliant",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0003",
+    "text": "The branch noted that the customer's submitted ID appeared valid but did not record which specific document type was used or verify it against the account file.",
+    "label": "Ambiguous",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0004",
+    "text": "Identity verification was performed via biometric e-KYC authentication, with the customer's explicit consent recorded and stored in the account file.",
+    "label": "Compliant",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0051",
+    "text": "The customer's date of birth on file does not match the date on the submitted identity document, and no explanation or correction is recorded.",
+    "label": "Ambiguous",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0024",
+    "text": "The transaction was flagged by the monitoring system as high-risk, but the resolution notes are missing from the case file.",
+    "label": "Ambiguous",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0040",
+    "text": "The beneficiary bank identified a wire transfer lacking complete originator information and reported it to the Financial Intelligence Unit as a suspicious transaction, consistent with policy.",
+    "label": "Compliant",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0066",
+    "text": "The file contains a note that periodic updation is 'in progress,' with no date indicating when the process began or is expected to conclude.",
+    "label": "Ambiguous",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0042",
+    "text": "The transfer was recorded as an interbank settlement, but the file does not clarify whether both parties were in fact financial institutions, which would determine if an exemption applies.",
+    "label": "Ambiguous",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0048",
+    "text": "The correspondent banking file references a due diligence questionnaire, but the completed questionnaire itself could not be located during the audit.",
+    "label": "Ambiguous",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0029",
+    "text": "The customer was assigned a low-risk rating despite operating a cash-intensive business in a jurisdiction flagged by FATF as high-risk.",
+    "label": "Non-Compliant",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0045",
+    "text": "The respondent bank's AML controls were assessed at onboarding, but no subsequent review has been documented in the years since.",
+    "label": "Ambiguous",
+    "topic": "correspondent banking due diligence"
+  },
+  {
+    "id": "clause_0019",
+    "text": "Upon detecting a pattern of transactions inconsistent with the customer's declared business activity, a suspicious transaction report was filed with the Financial Intelligence Unit within the prescribed timeframe.",
+    "label": "Compliant",
+    "topic": "suspicious transaction reporting"
+  }
+]

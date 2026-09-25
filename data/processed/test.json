@@ -1,0 +1,56 @@
+[
+  {
+    "id": "clause_0026",
+    "text": "No risk category was ever assigned to the account, and the field in the core banking system remains blank more than a year after account opening.",
+    "label": "Non-Compliant",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0010",
+    "text": "For the trust account, the trustee, settlor, and all beneficiaries holding a 15% or greater interest were identified and their identities verified per the standard CDD procedure.",
+    "label": "Compliant",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0002",
+    "text": "Customer onboarding was completed using a self-attested photograph only; no officially valid document was collected or retained on file.",
+    "label": "Non-Compliant",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0061",
+    "text": "The multi-level marketing company's account activity, including a high volume of similarly dated cheques, was flagged and reported to the appropriate authorities as required.",
+    "label": "Compliant",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0009",
+    "text": "The customer declared that no beneficial owner holds more than 25% interest, but no supporting shareholding documentation was requested to substantiate this claim.",
+    "label": "Ambiguous",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0054",
+    "text": "The customer disclosed a change in beneficial ownership during a periodic review, but the updated ownership chart was not attached to the compliance file.",
+    "label": "Ambiguous",
+    "topic": "beneficial ownership disclosure"
+  },
+  {
+    "id": "clause_0056",
+    "text": "Despite internal notes flagging the customer as a 'person of interest' due to political connections, no formal PEP classification or enhanced monitoring was ever applied.",
+    "label": "Non-Compliant",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0001",
+    "text": "The account was opened after collecting the customer's Aadhaar number and PAN, both of which were verified against the issuing authority's database prior to activation.",
+    "label": "Compliant",
+    "topic": "customer identity verification"
+  },
+  {
+    "id": "clause_0039",
+    "text": "The wire transfer record includes a reference number, but it is unclear from the file whether this satisfies the originator information requirement.",
+    "label": "Ambiguous",
+    "topic": "wire transfer originator information"
+  }
+]

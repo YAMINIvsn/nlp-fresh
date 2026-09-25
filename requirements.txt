@@ -1,0 +1,9 @@
+torch
+transformers>=5.0
+accelerate>=1.1.0
+datasets
+scikit-learn
+pandas
+numpy
+rapidfuzz
+pytest

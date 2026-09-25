@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "n_cases": 9,
+    "n_auto_resolved": 7,
+    "n_escalated": 2,
+    "escalation_rate": 0.2222,
+    "accuracy_on_auto_resolved": 1.0,
+    "escalated_case_texts": [
+      "The account was opened after collecting the customer's Aadhaar number and PAN, b...",
+      "The account was marked medium risk at opening, but there is no record of any sub..."
+    ]
+  },
+  "details": [
+    {
+      "text": "The account was opened after collecting the customer's Aadhaar number and PAN, both verified against the issuing authority.",
+      "fields": {
+        "aadhaar_present": true,
+        "pan_present": true,
+        "form60_present": false
+      },
+      "rule_verdict": null,
+      "finbert_label": "Compliant",
+      "finbert_confidence": 0.6995,
+      "tier": "escalate",
+      "final_verdict": "Escalated",
+      "reasoning": "Rule engine had no opinion; FinBERT predicted 'Compliant' with confidence 0.70, below the 0.7 threshold.",
+      "ground_truth": "Compliant"
+    },
+    {
+      "text": "Customer onboarding was completed using a self-attested photograph only; no officially valid document was collected.",
+      "fields": {
+        "aadhaar_present": false,
+        "pan_present": false,
+        "form60_present": false
+      },
+      "rule_verdict": "Non-Compliant",
+      "finbert_label": "Ambiguous",
+      "finbert_confidence": 0.3728,
+      "tier": "auto_reject",
+      "final_verdict": "Non-Compliant",
+      "reasoning": "Rule engine detected a hard violation.",
+      "ground_truth": "Non-Compliant"
+    },
+    {
+      "text": "The branch identified an unusually structured series of cash deposits just below the reporting threshold but took no further action.",
+      "fields": {
+        "suspicious_flag": true,
+        "str_filed": false
+      },
+      "rule_verdict": "Non-Compliant",
+      "finbert_label": "Non-Compliant",
+      "finbert_confidence": 0.9446,
+      "tier": "auto_reject",
+      "final_verdict": "Non-Compliant",
+      "reasoning": "Rule engine detected a hard violation.",
+      "ground_truth": "Non-Compliant"
+    },
+    {
+      "text": "Upon detecting a pattern of transactions inconsistent with declared business activity, an STR was filed within the prescribed timeframe.",
+      "fields": {
+        "suspicious_flag": true,
+        "str_filed": true
+      },
+      "rule_verdict": null,
+      "finbert_label": "Compliant",
+      "finbert_confidence": 0.8267,
+      "tier": "auto_approve",
+      "final_verdict": "Compliant",
+      "reasoning": "Rule engine and FinBERT (confidence 0.83) agree: compliant.",
+      "ground_truth": "Compliant"
+    },
+    {
+      "text": "No risk category was ever assigned to the account, and the field remains blank more than a year after opening.",
+      "fields": {
+        "risk_category": null
+      },
+      "rule_verdict": "Non-Compliant",
+      "finbert_label": "Non-Compliant",
+      "finbert_confidence": 0.8653,
+      "tier": "auto_reject",
+      "final_verdict": "Non-Compliant",
+      "reasoning": "Rule engine detected a hard violation.",
+      "ground_truth": "Non-Compliant"
+    },
+    {
+      "text": "The customer was categorised as high-risk based on documented parameters, reviewed every six months as required.",
+      "fields": {
+        "risk_category": "high"
+      },
+      "rule_verdict": null,
+      "finbert_label": "Compliant",
+      "finbert_confidence": 0.8542,
+      "tier": "auto_approve",
+      "final_verdict": "Compliant",
+      "reasoning": "Rule engine and FinBERT (confidence 0.85) agree: compliant.",
+      "ground_truth": "Compliant"
+    },
+    {
+      "text": "The correspondent relationship was established with a bank that has no physical presence and no affiliation with any regulated group.",
+      "fields": {
+        "correspondent_is_shell_bank": true
+      },
+      "rule_verdict": "Non-Compliant",
+      "finbert_label": "Ambiguous",
+      "finbert_confidence": 0.4507,
+      "tier": "auto_reject",
+      "final_verdict": "Non-Compliant",
+      "reasoning": "Rule engine detected a hard violation.",
+      "ground_truth": "Non-Compliant"
+    },
+    {
+      "text": "The account was marked medium risk at opening, but there is no record of any subsequent periodic review.",
+      "fields": {},
+      "rule_verdict": null,
+      "finbert_label": "Ambiguous",
+      "finbert_confidence": 0.8518,
+      "tier": "escalate",
+      "final_verdict": "Escalated",
+      "reasoning": "Rule engine had no opinion; FinBERT predicted 'Ambiguous' with confidence 0.85, below the 0.7 threshold.",
+      "ground_truth": "Non-Compliant"
+    },
+    {
+      "text": "The customer's identity was verified using an officially valid document, cross-checked against the issuing authority's records.",
+      "fields": {
+        "aadhaar_present": true,
+        "pan_present": true,
+        "form60_present": false
+      },
+      "rule_verdict": null,
+      "finbert_label": "Compliant",
+      "finbert_confidence": 0.931,
+      "tier": "auto_approve",
+      "final_verdict": "Compliant",
+      "reasoning": "Rule engine and FinBERT (confidence 0.93) agree: compliant.",
+      "ground_truth": "Compliant"
+    }
+  ]
+}

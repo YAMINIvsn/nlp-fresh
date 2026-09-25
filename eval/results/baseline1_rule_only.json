@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "n_cases": 23,
+    "accuracy": 0.9565,
+    "precision": 1.0,
+    "recall": 0.9231,
+    "f1": 0.96,
+    "false_negative_rate_on_violations": 0.0769
+  },
+  "details": [
+    {
+      "case": {
+        "customer_name_verified": true,
+        "cdd_completed": true
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "customer_name_verified": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "transaction_amount": 60000,
+        "is_walkin": true,
+        "identity_verified": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "transaction_amount": 20000,
+        "is_walkin": true,
+        "identity_verified": false
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "aadhaar_present": true,
+        "pan_present": false,
+        "form60_present": false
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "aadhaar_present": false,
+        "pan_present": false,
+        "form60_present": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "risk_category": "high"
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "risk_category": null
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "is_pep": true,
+        "senior_approval": true,
+        "source_of_funds_verified": true
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "is_pep": true,
+        "senior_approval": false,
+        "source_of_funds_verified": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "suspicious_flag": true,
+        "str_filed": true
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "suspicious_flag": true,
+        "str_filed": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "sanctions_match": false
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "sanctions_match": true
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "correspondent_is_shell_bank": false
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "correspondent_is_shell_bank": true
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "wire_transfer_amount": 75000,
+        "originator_info_present": true
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "wire_transfer_amount": 75000,
+        "originator_info_present": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "risk_category": "low",
+        "years_since_update": 5
+      },
+      "ground_truth": "Compliant",
+      "predicted": "Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "risk_category": "high",
+        "years_since_update": 3
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {},
+      "ground_truth": "Non-Compliant",
+      "predicted": "Compliant",
+      "correct": false
+    },
+    {
+      "case": {
+        "cdd_completed": true,
+        "aadhaar_present": false,
+        "pan_present": false,
+        "form60_present": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    },
+    {
+      "case": {
+        "transaction_amount": 50000,
+        "is_walkin": true,
+        "identity_verified": false
+      },
+      "ground_truth": "Non-Compliant",
+      "predicted": "Non-Compliant",
+      "correct": true
+    }
+  ]
+}

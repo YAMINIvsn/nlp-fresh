@@ -1,0 +1,74 @@
+[
+  {
+    "id": "clause_0013",
+    "text": "Upon identifying the customer as a foreign politically exposed person, senior management approval was obtained before the account was opened, and enhanced ongoing monitoring was implemented.",
+    "label": "Compliant",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0017",
+    "text": "PEP screening was not conducted on the family members of the identified politically exposed customer, despite this being flagged as a requirement in the internal policy.",
+    "label": "Non-Compliant",
+    "topic": "politically exposed person handling"
+  },
+  {
+    "id": "clause_0036",
+    "text": "An acknowledgment of KYC updation was issued to the customer, though the underlying documents supporting the update are not attached to the file.",
+    "label": "Ambiguous",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0032",
+    "text": "The customer's KYC information has not been updated in over nine years, despite the account being classified as high risk.",
+    "label": "Non-Compliant",
+    "topic": "periodic KYC updation"
+  },
+  {
+    "id": "clause_0068",
+    "text": "The intermediary bank failed to retain originator information when forwarding a chain of wire transfers, contrary to the applicable retention requirement.",
+    "label": "Non-Compliant",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0021",
+    "text": "An internal alert was generated for the account, but the file does not indicate whether the alert was reviewed or dismissed by the compliance team.",
+    "label": "Ambiguous",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0025",
+    "text": "The customer was categorised as high-risk based on documented parameters including business activity, geography, and transaction profile, with the categorisation reviewed every six months as required.",
+    "label": "Compliant",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0030",
+    "text": "The risk score changed in the system but no explanation or supporting rationale was documented for the change.",
+    "label": "Ambiguous",
+    "topic": "risk categorization"
+  },
+  {
+    "id": "clause_0041",
+    "text": "Several wire transfers just under the reporting threshold were processed for the same beneficiary in a short window without any review for possible structuring.",
+    "label": "Non-Compliant",
+    "topic": "wire transfer originator information"
+  },
+  {
+    "id": "clause_0060",
+    "text": "The account showed a sharp increase in turnover inconsistent with its historical balance, and while a note was made, no formal investigation appears in the record.",
+    "label": "Ambiguous",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0022",
+    "text": "The compliance officer confidentially filed an STR without informing the customer or account-facing staff, in accordance with the tipping-off prohibition.",
+    "label": "Compliant",
+    "topic": "suspicious transaction reporting"
+  },
+  {
+    "id": "clause_0058",
+    "text": "A large cash deposit inconsistent with the customer's declared salary was investigated, found to have a legitimate documented source, and appropriately closed without escalation.",
+    "label": "Compliant",
+    "topic": "suspicious transaction reporting"
+  }
+]

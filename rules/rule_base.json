@@ -1,0 +1,186 @@
+[
+  {
+    "rule_id": "KYC-001",
+    "description": "No account shall be opened in an anonymous or fictitious/benami name",
+    "condition": "customer_name_verified == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter III, Section 10(a)"
+  },
+  {
+    "rule_id": "KYC-002",
+    "description": "No account or transaction shall proceed without following the CDD procedure",
+    "condition": "cdd_completed == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter III, Section 10(c)"
+  },
+  {
+    "rule_id": "KYC-003",
+    "description": "Customer identification is mandatory for walk-in transactions equal to or exceeding INR 50,000",
+    "condition": "transaction_amount >= 50000 and is_walkin == True and identity_verified == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter V, Section 13(e)"
+  },
+  {
+    "rule_id": "KYC-004",
+    "description": "An Aadhaar number, PAN, or Form 60 must be obtained from an individual establishing an account-based relationship",
+    "condition": "aadhaar_present == False and pan_present == False and form60_present == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter VI, Section 15(a)"
+  },
+  {
+    "rule_id": "KYC-005",
+    "description": "Customers must be categorised as low, medium, or high risk based on assessed risk perception",
+    "condition": "risk_category is None",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter IV, Section 12(a)"
+  },
+  {
+    "rule_id": "KYC-006",
+    "description": "Enhanced due diligence for PEPs requires senior-level approval and identification of source of funds",
+    "condition": "is_pep == True and (senior_approval == False or source_of_funds_verified == False)",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter VI Part VI(A), Section 41"
+  },
+  {
+    "rule_id": "KYC-007",
+    "description": "Suspicious transactions must be reported to FIU-IND without undue delay, and any day of delay is a separate violation",
+    "condition": "suspicious_flag == True and str_filed == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter VIII, Section 49"
+  },
+  {
+    "rule_id": "KYC-008",
+    "description": "Customer identity must not match any name on RBI-circulated sanctions lists",
+    "condition": "sanctions_match == True",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter III, Section 10(i)"
+  },
+  {
+    "rule_id": "KYC-009",
+    "description": "No account shall exist in the name of individuals/entities on the ISIL-Al Qaida or 1988 Taliban UNSC sanctions lists",
+    "condition": "unsc_list_match == True",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter IX, Section 51"
+  },
+  {
+    "rule_id": "KYC-010",
+    "description": "Records of customer identity and transactions must be preserved for at least five years",
+    "condition": "record_retention_years < 5",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter VII, Section 46(a)-(b)"
+  },
+  {
+    "rule_id": "KYC-011",
+    "description": "Risk categorisation must be reviewed at least once every six months",
+    "condition": "risk_review_periodicity_months > 6",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter VI Part V, Section 37(a)"
+  },
+  {
+    "rule_id": "KYC-012",
+    "description": "Periodic KYC updation must occur at least every 2 years (high risk), 8 years (medium risk), or 10 years (low risk)",
+    "condition": "(risk_category == 'high' and years_since_update > 2) or (risk_category == 'medium' and years_since_update > 8) or (risk_category == 'low' and years_since_update > 10)",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter VI Part V, Section 38"
+  },
+  {
+    "rule_id": "KYC-013",
+    "description": "Correspondent banking relationships shall not be entered into with shell banks",
+    "condition": "correspondent_is_shell_bank == True",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter X, Section 64(f)"
+  },
+  {
+    "rule_id": "KYC-014",
+    "description": "Domestic wire transfers of INR 50,000 or above must include originator information (name, address, account number)",
+    "condition": "wire_transfer_amount >= 50000 and originator_info_present == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "RBI KYC Master Direction, Chapter X, Section 65(b)"
+  },
+  {
+    "rule_id": "FATF-001",
+    "description": "Financial institutions must be prohibited from keeping anonymous accounts or accounts in obviously fictitious names",
+    "condition": "customer_name_verified == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 10 - Customer Due Diligence"
+  },
+  {
+    "rule_id": "FATF-002",
+    "description": "CDD must include identifying and verifying the customer's identity using reliable, independent source documents, data, or information",
+    "condition": "identity_verified_independent_source == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 10(a)"
+  },
+  {
+    "rule_id": "FATF-003",
+    "description": "The beneficial owner must be identified, with reasonable measures taken to verify their identity",
+    "condition": "beneficial_owner_identified == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 10(b)"
+  },
+  {
+    "rule_id": "FATF-004",
+    "description": "Where a financial institution cannot complete required CDD measures, it must not open the account, commence business relations, or perform the transaction",
+    "condition": "cdd_completed == False and (account_opened == True or transaction_performed == True)",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 10, final CDD failure clause"
+  },
+  {
+    "rule_id": "FATF-005",
+    "description": "For foreign PEPs, senior management approval is required before establishing or continuing the business relationship",
+    "condition": "is_foreign_pep == True and senior_approval == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 12(b)"
+  },
+  {
+    "rule_id": "FATF-006",
+    "description": "Correspondent banking relationships require senior management approval before establishment",
+    "condition": "is_correspondent_banking == True and senior_approval == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 13(c)"
+  },
+  {
+    "rule_id": "FATF-007",
+    "description": "Financial institutions must be prohibited from entering into or continuing correspondent relationships with shell banks",
+    "condition": "correspondent_is_shell_bank == True",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 13, shell bank prohibition clause"
+  },
+  {
+    "rule_id": "FATF-008",
+    "description": "A suspicious transaction or suspected proceeds of criminal activity must be promptly reported to the FIU",
+    "condition": "suspicious_flag == True and str_filed == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 20"
+  },
+  {
+    "rule_id": "FATF-009",
+    "description": "Countries/institutions must freeze without delay funds or assets of persons/entities designated under UNSC terrorism-related sanctions",
+    "condition": "unsc_terrorism_list_match == True and asset_frozen == False",
+    "verdict_if_true": "Violation",
+    "severity": "hard",
+    "source": "FATF Recommendation 6 - Targeted Financial Sanctions (Terrorism)"
+  }
+]
