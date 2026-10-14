@@ -1,0 +1,3 @@
+﻿In paragraph 38 of the Master Direction, a new clause shall be inserted before paragraph 38(a):
+
+Notwithstanding the provisions given above, in respect of an individual customer who is categorized as low risk, the RE shall allow all transactions and ensure the updation of KYC within one year of its falling due for KYC or upto June 30, 2026, whichever is later. The RE shall subject accounts of such customers to regular monitoring. This shall also be applicable to low-risk individual customers for whom periodic updation of KYC has already fallen due.

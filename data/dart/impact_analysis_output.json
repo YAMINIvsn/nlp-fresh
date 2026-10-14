@@ -1,0 +1,141 @@
+{
+  "changed_obligation_ids": [
+    "KYC-LOW-RISK-UPDATE"
+  ],
+  "affected_obligation_ids": [
+    "CTRL-CUSTOMER-NOTIFICATION",
+    "CTRL-KYC-DEADLINE",
+    "CTRL-KYC-PERIODIC-REVIEW",
+    "CTRL-OVERDUE-KYC-MONITORING",
+    "KYC-LOW-RISK-UPDATE"
+  ],
+  "case_impacts": [
+    {
+      "case_id": "CASE-001",
+      "matched_obligation_ids": [
+        "CTRL-KYC-PERIODIC-REVIEW",
+        "CTRL-OVERDUE-KYC-MONITORING"
+      ],
+      "impact_paths": [
+        {
+          "obligation_id": "CTRL-KYC-PERIODIC-REVIEW",
+          "path": [
+            "KYC-LOW-RISK-UPDATE",
+            "CTRL-KYC-PERIODIC-REVIEW"
+          ]
+        },
+        {
+          "obligation_id": "CTRL-OVERDUE-KYC-MONITORING",
+          "path": [
+            "KYC-LOW-RISK-UPDATE",
+            "CTRL-KYC-PERIODIC-REVIEW",
+            "CTRL-OVERDUE-KYC-MONITORING"
+          ]
+        }
+      ],
+      "impact_status": "potentially_affected"
+    },
+    {
+      "case_id": "CASE-002",
+      "matched_obligation_ids": [
+        "CTRL-KYC-DEADLINE"
+      ],
+      "impact_paths": [
+        {
+          "obligation_id": "CTRL-KYC-DEADLINE",
+          "path": [
+            "KYC-LOW-RISK-UPDATE",
+            "CTRL-KYC-DEADLINE"
+          ]
+        }
+      ],
+      "impact_status": "potentially_affected"
+    },
+    {
+      "case_id": "CASE-006",
+      "matched_obligation_ids": [
+        "CTRL-CUSTOMER-NOTIFICATION"
+      ],
+      "impact_paths": [
+        {
+          "obligation_id": "CTRL-CUSTOMER-NOTIFICATION",
+          "path": [
+            "KYC-LOW-RISK-UPDATE",
+            "CTRL-KYC-DEADLINE",
+            "CTRL-CUSTOMER-NOTIFICATION"
+          ]
+        }
+      ],
+      "impact_status": "potentially_affected"
+    }
+  ],
+  "reaudit": {
+    "selected": [
+      {
+        "case_id": "CASE-001",
+        "risk_score": 0.85,
+        "reasons": [
+          "depends_on_changed_obligation",
+          "risk_threshold_met"
+        ]
+      },
+      {
+        "case_id": "CASE-002",
+        "risk_score": 0.65,
+        "reasons": [
+          "depends_on_changed_obligation",
+          "risk_threshold_met"
+        ]
+      },
+      {
+        "case_id": "CASE-004",
+        "risk_score": 0.1,
+        "reasons": [
+          "mandatory_review"
+        ]
+      },
+      {
+        "case_id": "CASE-005",
+        "risk_score": 0.2,
+        "reasons": [
+          "uncertain_case"
+        ]
+      }
+    ],
+    "skipped": [
+      {
+        "case_id": "CASE-003",
+        "risk_score": 0.15,
+        "reasons": []
+      },
+      {
+        "case_id": "CASE-006",
+        "risk_score": 0.2,
+        "reasons": [
+          "depends_on_changed_obligation"
+        ]
+      }
+    ],
+    "counts": {
+      "eligible_cases": 6,
+      "selected_cases": 4,
+      "skipped_cases": 2,
+      "re_audit_reduction": 0.33333333333333337
+    },
+    "warning": "This selector is a baseline, not a guarantee of safety. Evaluate missed violations against independently labelled ground truth."
+  },
+  "summary": {
+    "changed_obligation_count": 1,
+    "affected_obligation_count": 5,
+    "potentially_affected_case_count": 3,
+    "selected_for_reaudit": 4,
+    "not_selected_for_reaudit": 2
+  },
+  "warning": "Graph reachability indicates potential impact, not a definitive legal conclusion. Validate dependencies, case scope, and regulatory applicability.",
+  "metadata": {
+    "system": "DART",
+    "analysis_type": "regulatory_impact_propagation",
+    "generated_at_utc": "2026-10-14T02:11:42.224340+00:00",
+    "input_regulation_version": "RBI-KYC-amendment-demo"
+  }
+}

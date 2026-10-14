@@ -1,0 +1,41 @@
+﻿38. 29Periodic Updation 
+Periodic updation shall be carried out at least once in every two years for high risk 
+customers, once in every eight years for medium risk customers and once in every 
+ten years for low risk customers  as per the following procedure: 
+(a)  REs shall carry out  
+i. 
+PAN verification from the verification facility available with the issuing 
+authority and  
+ii. 
+Authentication, of Aadhaar Number already available with the RE with 
+the explicit consent of the customer in applicable cases. 
+iii. 
+In case identification information available with Aadhaar does not 
+contain current address an OVD containing current address may be 
+obtained.   
+iv. 
+Certified copy of OVD containing identity and address shall be obtained 
+at the time of periodic updation from individuals not eligible to obtain 
+Aadhaar, except from individuals who are categorised as â€˜low riskâ€™. In 
+case of low risk customers when there is no change in status with 
+respect to their identities and addresses, a self-certification to that 
+effect shall be obtained.  
+v. 
+In case of Legal entities, RE shall review the documents sought at the 
+time of opening of account and obtain fresh certified copies. 
+(b) REs may not insist on the physical presence of the customer for the purpose of 
+furnishing OVD or furnishing consent for Aadhaar authentication unless there  
+are sufficient reasons that physical presence of the account holder/holders is 
+required to establish their bona-fides. Normally, OVD/Consent forwarded by the 
+customer through mail/post, etc., shall be acceptable. 
+(c)  REs shall ensure to provide acknowledgment with date of having performed 
+KYC updation. 
+(d) The time limits prescribed above would apply from the date of opening of the 
+account/ last verification of KYC.  
+
+
+--- PAGE 26 ---
+ 
+26 
+ 
+ 

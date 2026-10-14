@@ -1,0 +1,47 @@
+{
+  "note": "Synthetic demo only. Graph-affected coverage is not recall against independently labelled violations.",
+  "baseline": {
+    "strategy": "Risk-based baseline",
+    "total_cases": 6,
+    "selected_cases": 4,
+    "skipped_cases": 2,
+    "review_reduction_percent": 33.33,
+    "graph_affected_cases": 3,
+    "affected_cases_selected": 2,
+    "affected_case_coverage_percent": 66.67,
+    "missed_graph_affected_cases": [
+      "CASE-006"
+    ],
+    "selected_case_ids": [
+      "CASE-001",
+      "CASE-002",
+      "CASE-004",
+      "CASE-005"
+    ],
+    "skipped_case_ids": [
+      "CASE-003",
+      "CASE-006"
+    ]
+  },
+  "impact_first": {
+    "strategy": "Impact-first selector",
+    "total_cases": 6,
+    "selected_cases": 5,
+    "skipped_cases": 1,
+    "review_reduction_percent": 16.67,
+    "graph_affected_cases": 3,
+    "affected_cases_selected": 3,
+    "affected_case_coverage_percent": 100.0,
+    "missed_graph_affected_cases": [],
+    "selected_case_ids": [
+      "CASE-001",
+      "CASE-002",
+      "CASE-004",
+      "CASE-005",
+      "CASE-006"
+    ],
+    "skipped_case_ids": [
+      "CASE-003"
+    ]
+  }
+}

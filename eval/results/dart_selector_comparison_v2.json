@@ -1,0 +1,99 @@
+{
+  "note": "Synthetic six-case demonstration. Graph-affected coverage is not recall against independently labelled regulatory violations. Manual triage is reported separately from re-audit.",
+  "risk_threshold": 0.35,
+  "strategies": {
+    "baseline": {
+      "strategy": "Risk-based baseline",
+      "total_cases": 6,
+      "selected_cases": 4,
+      "manual_triage_cases": 0,
+      "skipped_cases": 2,
+      "strict_reaudit_reduction_percent": 33.33,
+      "graph_affected_cases": 3,
+      "affected_cases_selected_for_reaudit": 2,
+      "affected_case_reaudit_coverage_percent": 66.67,
+      "affected_cases_not_selected_for_immediate_reaudit": [
+        "CASE-006"
+      ],
+      "affected_cases_sent_to_triage": [],
+      "selected_case_ids": [
+        "CASE-001",
+        "CASE-002",
+        "CASE-004",
+        "CASE-005"
+      ],
+      "manual_triage_case_ids": [],
+      "skipped_case_ids": [
+        "CASE-003",
+        "CASE-006"
+      ]
+    },
+    "impact_first": {
+      "strategy": "Impact-first selector",
+      "total_cases": 6,
+      "selected_cases": 5,
+      "manual_triage_cases": 0,
+      "skipped_cases": 1,
+      "strict_reaudit_reduction_percent": 16.67,
+      "graph_affected_cases": 3,
+      "affected_cases_selected_for_reaudit": 3,
+      "affected_case_reaudit_coverage_percent": 100.0,
+      "affected_cases_not_selected_for_immediate_reaudit": [],
+      "affected_cases_sent_to_triage": [],
+      "selected_case_ids": [
+        "CASE-001",
+        "CASE-002",
+        "CASE-004",
+        "CASE-005",
+        "CASE-006"
+      ],
+      "manual_triage_case_ids": [],
+      "skipped_case_ids": [
+        "CASE-003"
+      ]
+    },
+    "hybrid": {
+      "strategy": "Hybrid risk-aware selector",
+      "total_cases": 6,
+      "selected_cases": 4,
+      "manual_triage_cases": 1,
+      "skipped_cases": 1,
+      "strict_reaudit_reduction_percent": 16.67,
+      "graph_affected_cases": 3,
+      "affected_cases_selected_for_reaudit": 2,
+      "affected_case_reaudit_coverage_percent": 66.67,
+      "affected_cases_not_selected_for_immediate_reaudit": [
+        "CASE-006"
+      ],
+      "affected_cases_sent_to_triage": [
+        "CASE-006"
+      ],
+      "selected_case_ids": [
+        "CASE-001",
+        "CASE-002",
+        "CASE-004",
+        "CASE-005"
+      ],
+      "manual_triage_case_ids": [
+        "CASE-006"
+      ],
+      "skipped_case_ids": [
+        "CASE-003"
+      ]
+    }
+  },
+  "hybrid_decisions": {
+    "selected": [
+      "CASE-001",
+      "CASE-002",
+      "CASE-004",
+      "CASE-005"
+    ],
+    "manual_triage": [
+      "CASE-006"
+    ],
+    "skipped": [
+      "CASE-003"
+    ]
+  }
+}

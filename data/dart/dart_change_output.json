@@ -1,0 +1,340 @@
+{
+  "old_extraction": {
+    "provision_id": "RBI-KYC-para38-baseline",
+    "source_url": "",
+    "obligations": [
+      {
+        "obligation_id": "ob1",
+        "actor": "REs",
+        "action": "carry out periodic KYC updation",
+        "modality": "must",
+        "conditions": [
+          "high risk customers: at least once every two years",
+          "medium risk customers: at least once every eight years",
+          "low risk customers: at least once every ten years"
+        ],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "Periodic updation shall be carried out at least once in every two years for high risk customers, once in every eight years for medium risk customers and once in every ten years for low risk customers as per the following procedure:",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob2",
+        "actor": "REs",
+        "action": "carry out PAN verification",
+        "modality": "must",
+        "conditions": [],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "REs shall carry out i. PAN verification from the verification facility available with the issuing authority and ii. Authentication, of Aadhaar Number already available with the RE with the explicit consent of the customer in applicable cases.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob3",
+        "actor": "REs",
+        "action": "carry out Aadhaar authentication",
+        "modality": "must",
+        "conditions": [
+          "explicit consent of the customer",
+          "applicable cases"
+        ],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "REs shall carry out i. PAN verification from the verification facility available with the issuing authority and ii. Authentication, of Aadhaar Number already available with the RE with the explicit consent of the customer in applicable cases.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob4",
+        "actor": "REs",
+        "action": "obtain OVD containing current address",
+        "modality": "may",
+        "conditions": [
+          "identification information available with Aadhaar does not contain current address"
+        ],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "iii. In case identification information available with Aadhaar does not contain current address an OVD containing current address may be obtained.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob5",
+        "actor": "REs",
+        "action": "obtain certified copy of OVD containing identity and address",
+        "modality": "must",
+        "conditions": [
+          "individuals not eligible to obtain Aadhaar"
+        ],
+        "exceptions": [
+          "individuals who are categorised as ‘low risk’"
+        ],
+        "entity_scope": "individuals",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "iv. Certified copy of OVD containing identity and address shall be obtained at the time of periodic updation from individuals not eligible to obtain Aadhaar, except from individuals who are categorised as ‘low risk’.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob6",
+        "actor": "REs",
+        "action": "obtain self‑certification",
+        "modality": "must",
+        "conditions": [
+          "low risk customers",
+          "no change in status with respect to their identities and addresses"
+        ],
+        "exceptions": [],
+        "entity_scope": "low risk customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "In case of low risk customers when there is no change in status with respect to their identities and addresses, a self-certification to that effect shall be obtained.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob7",
+        "actor": "REs",
+        "action": "review documents and obtain fresh certified copies",
+        "modality": "must",
+        "conditions": [
+          "legal entities"
+        ],
+        "exceptions": [],
+        "entity_scope": "legal entities",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "v. In case of Legal entities, RE shall review the documents sought at the time of opening of account and obtain fresh certified copies.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob8",
+        "actor": "REs",
+        "action": "not insist on physical presence of the customer for furnishing OVD or Aadhaar consent",
+        "modality": "must_not",
+        "conditions": [
+          "unless there are sufficient reasons that physical presence of the account holder/holders is required to establish their bona‑fides"
+        ],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "REs may not insist on the physical presence of the customer for the purpose of furnishing OVD or furnishing consent for Aadhaar authentication unless there are sufficient reasons that physical presence of the account holder/holders is required to establish their bona‑fides.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob9",
+        "actor": "REs",
+        "action": "accept OVD/Consent forwarded by mail/post etc.",
+        "modality": "must",
+        "conditions": [],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "Normally, OVD/Consent forwarded by the customer through mail/post, etc., shall be acceptable.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob10",
+        "actor": "REs",
+        "action": "provide acknowledgment with date of having performed KYC updation",
+        "modality": "must",
+        "conditions": [],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "REs shall ensure to provide acknowledgment with date of having performed KYC updation.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob11",
+        "actor": "REs",
+        "action": "apply time limits from date of opening of the account/last verification of KYC",
+        "modality": "must",
+        "conditions": [],
+        "exceptions": [],
+        "entity_scope": "customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "The time limits prescribed above would apply from the date of opening of the account/ last verification of KYC.",
+        "uncertainties": [
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      }
+    ],
+    "source_text_sufficient": true
+  },
+  "new_extraction": {
+    "provision_id": "RBI-KYC-para38-2025-insertion",
+    "source_url": "",
+    "obligations": [
+      {
+        "obligation_id": "ob1",
+        "actor": "RE",
+        "action": "allow all transactions",
+        "modality": "must",
+        "conditions": [
+          "individual customer categorized as low risk"
+        ],
+        "exceptions": [],
+        "entity_scope": "low risk individual customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "the RE shall allow all transactions",
+        "uncertainties": [
+          "effective dates not specified"
+        ],
+        "evidence_quote_verified": true
+      },
+      {
+        "obligation_id": "ob2",
+        "actor": "RE",
+        "action": "ensure KYC updation within one year of due or by June 30, 2026",
+        "modality": "must",
+        "conditions": [
+          "individual customer categorized as low risk",
+          "periodic updation of KYC has already fallen due"
+        ],
+        "exceptions": [],
+        "entity_scope": "low risk individual customers",
+        "effective_from": "unknown",
+        "effective_to": "2026-06-30",
+        "evidence_quote": "the RE shall ensure the updation of KYC within one year of its falling due for KYC or upto June 30, 2026, whichever is later.",
+        "uncertainties": [
+          "effective_from not specified",
+          "Evidence quote was not found verbatim in the supplied provision."
+        ],
+        "evidence_quote_verified": false
+      },
+      {
+        "obligation_id": "ob3",
+        "actor": "RE",
+        "action": "subject accounts to regular monitoring",
+        "modality": "must",
+        "conditions": [
+          "individual customer categorized as low risk",
+          "periodic updation of KYC has already fallen due"
+        ],
+        "exceptions": [],
+        "entity_scope": "low risk individual customers",
+        "effective_from": "unknown",
+        "effective_to": "unknown",
+        "evidence_quote": "The RE shall subject accounts of such customers to regular monitoring.",
+        "uncertainties": [
+          "effective dates not specified"
+        ],
+        "evidence_quote_verified": true
+      }
+    ],
+    "source_text_sufficient": true
+  },
+  "change_analysis": {
+    "old_version": "2016-baseline",
+    "new_version": "2025-06-12-amendment",
+    "changes": [
+      {
+        "change_id": "C001",
+        "change_type": "added",
+        "old_obligation_id": null,
+        "new_obligation_id": "ob1",
+        "change_summary": "New obligation for low risk individual customers to allow all transactions.",
+        "old_evidence_quote": "",
+        "new_evidence_quote": "the RE shall allow all transactions",
+        "uncertainties": [],
+        "original_change_type": "added",
+        "scope_validation": {
+          "scope_status": "new_obligation",
+          "needs_human_validation": true,
+          "issues": [],
+          "warnings": [
+            "Confirm whether this obligation is new or an amendment-specific exception."
+          ]
+        }
+      },
+      {
+        "change_id": "C002",
+        "change_type": "added",
+        "old_obligation_id": null,
+        "new_obligation_id": "ob3",
+        "change_summary": "New obligation for low risk individual customers to subject accounts to regular monitoring.",
+        "old_evidence_quote": "",
+        "new_evidence_quote": "The RE shall subject accounts of such customers to regular monitoring.",
+        "uncertainties": [],
+        "original_change_type": "added",
+        "scope_validation": {
+          "scope_status": "new_obligation",
+          "needs_human_validation": true,
+          "issues": [],
+          "warnings": [
+            "Confirm whether this obligation is new or an amendment-specific exception."
+          ]
+        }
+      },
+      {
+        "change_id": "C003",
+        "change_type": "uncertain",
+        "old_obligation_id": "ob1",
+        "new_obligation_id": "ob2",
+        "change_summary": "KYC updation frequency for low risk customers changed from at least once every ten years to within one year of due or by June 30, 2026.",
+        "old_evidence_quote": "Periodic updation shall be carried out at least once in every two years for high risk customers, once in every eight years for medium risk customers and once in every ten years for low risk customers as per the following procedure:",
+        "new_evidence_quote": "the RE shall ensure the updation of KYC within one year of its falling due for KYC or upto June 30, 2026, whichever is later.",
+        "uncertainties": [
+          "effective_from not specified",
+          "Evidence quote was not found verbatim in the supplied provision.",
+          "Scope review is required because the obligations may apply to different populations or conditions."
+        ],
+        "original_change_type": "modified",
+        "scope_validation": {
+          "scope_status": "review_required",
+          "needs_human_validation": true,
+          "issues": [
+            "A modified classification may be too broad because scope, conditions, or exceptions differ."
+          ],
+          "warnings": [
+            "The old and new obligations have different stated entity scopes.",
+            "The conditions differ; verify whether the new rule applies only to a subset."
+          ]
+        }
+      }
+    ],
+    "needs_human_validation": true
+  }
+}

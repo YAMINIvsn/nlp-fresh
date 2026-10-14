@@ -1,0 +1,3 @@
+Illustrative example only, NOT an official RBI provision:
+A regulated entity must review the customer's identification documents every year.
+The entity must record the date of review in the customer file.

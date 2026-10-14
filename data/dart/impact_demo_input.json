@@ -1,0 +1,84 @@
+
+{
+  "regulation_version": "RBI-KYC-amendment-demo",
+  "risk_threshold": 0.35,
+  "obligation_mapping": {
+    "ob1": {
+      "control_id": "KYC-LOW-RISK-UPDATE",
+      "status": "human_review_required",
+      "rationale": "The extracted obligation concerns allowing transactions for eligible low-risk individual customers. Confirm that the existing KYC update control appropriately represents this amendment-specific exception."
+    },
+    "ob2": {
+      "control_id": "CTRL-KYC-DEADLINE",
+      "status": "human_review_required",
+      "rationale": "The extracted obligation specifies the KYC update deadline for eligible low-risk individual customers. Confirm the population and applicability conditions."
+    },
+    "ob3": {
+      "control_id": "CTRL-OVERDUE-KYC-MONITORING",
+      "status": "human_review_required",
+      "rationale": "The extracted obligation concerns regular monitoring of accounts whose periodic KYC update is overdue. Confirm the control's scope."
+    }
+  },
+  "dependencies": [
+    {
+      "source_id": "KYC-LOW-RISK-UPDATE",
+      "dependent_id": "CTRL-KYC-PERIODIC-REVIEW"
+    },
+    {
+      "source_id": "CTRL-KYC-PERIODIC-REVIEW",
+      "dependent_id": "CTRL-OVERDUE-KYC-MONITORING"
+    },
+    {
+      "source_id": "KYC-LOW-RISK-UPDATE",
+      "dependent_id": "CTRL-KYC-DEADLINE"
+    },
+    {
+      "source_id": "CTRL-KYC-DEADLINE",
+      "dependent_id": "CTRL-CUSTOMER-NOTIFICATION"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "CASE-001",
+      "obligation_ids": "CTRL-KYC-PERIODIC-REVIEW;CTRL-OVERDUE-KYC-MONITORING",
+      "risk_score": 0.85,
+      "mandatory_review": "false",
+      "uncertain": "false"
+    },
+    {
+      "case_id": "CASE-002",
+      "obligation_ids": "CTRL-KYC-DEADLINE",
+      "risk_score": 0.65,
+      "mandatory_review": "false",
+      "uncertain": "false"
+    },
+    {
+      "case_id": "CASE-003",
+      "obligation_ids": "UNRELATED-CONTROL",
+      "risk_score": 0.15,
+      "mandatory_review": "false",
+      "uncertain": "false"
+    },
+    {
+      "case_id": "CASE-004",
+      "obligation_ids": "UNRELATED-CONTROL",
+      "risk_score": 0.10,
+      "mandatory_review": "true",
+      "uncertain": "false"
+    },
+    {
+      "case_id": "CASE-005",
+      "obligation_ids": "UNRELATED-CONTROL",
+      "risk_score": 0.20,
+      "mandatory_review": "false",
+      "uncertain": "true"
+    },
+    {
+      "case_id": "CASE-006",
+      "obligation_ids": "CTRL-CUSTOMER-NOTIFICATION",
+      "risk_score": 0.20,
+      "mandatory_review": "false",
+      "uncertain": "false"
+    }
+  ]
+}
