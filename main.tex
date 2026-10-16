@@ -1,0 +1,162 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\title{NLP-Based Framework for Automated Compliance Auditing of Financial Documents Using Large Language Models}
+
+\author{
+\IEEEauthorblockN{V. Yamini}
+\IEEEauthorblockA{M.Tech Integrated, Computer Science and Engineering\\
+School of Computer Science and Engineering (SCOPE)\\
+Vellore Institute of Technology, Vellore, India\\
+yamini.v2023@vitstudent.ac.in}
+\and
+\IEEEauthorblockN{Divyendu P}
+\IEEEauthorblockA{M.Tech Integrated, Computer Science and Engineering\\
+School of Computer Science and Engineering (SCOPE)\\
+Vellore Institute of Technology, Vellore, India\\
+divyendu.p2023@vitstudent.ac.in}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Financial institutions must assess large volumes of unstructured documents against evolving regulatory requirements, including Know Your Customer (KYC) and Anti-Money Laundering (AML) obligations. Manual auditing is difficult to scale, while machine-learning and large language model (LLM) approaches may struggle to enforce mandatory requirements consistently and provide verifiable evidence. This paper proposes an NLP-based compliance auditing framework combining transformer-based classification, LLM-assisted obligation extraction, deterministic rule validation, and evidence-linked outputs. A dependency-aware regulatory transition component, termed Dependency-Aware Regulatory Transition (DART), is proposed to compare regulatory versions, map changed obligations to dependent controls, and prioritize cases for re-audit. The framework is intended to support traceability and human oversight while reducing avoidable review effort. Its effectiveness must be evaluated using independently labelled data and comparisons with full re-audit, text-difference, semantic-change, and rule-based baselines. Quantitative results should be added only after controlled experiments have been completed.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Financial compliance, natural language processing, FinBERT, large language models, rule-based validation, regulatory auditing, dependency graphs, selective re-audit.
+\end{IEEEkeywords}
+
+\section{Introduction}
+Financial institutions operate under regulatory frameworks that evolve over time. Compliance evidence may be distributed across audit reports, policy manuals, customer records, and procedures. Manual review is time-consuming and may be inconsistent, especially when requirements are expressed using different wording or amendments affect only a subset of controls.
+
+NLP models can identify semantic patterns and classify text, while LLMs can extract obligations and explain relationships between passages. However, probabilistic models alone should not determine whether a mandatory requirement has been satisfied: outputs may be incomplete, unsupported, or inconsistent with explicit requirements. Deterministic rules provide reproducible checks for deadlines, thresholds, mandatory fields, and required evidence, but may not handle linguistic variation effectively.
+
+This work proposes a hybrid framework combining NLP classification, LLM-assisted extraction, deterministic validation, and evidence traceability. It also introduces DART, a dependency-aware method for connecting regulatory amendments to affected controls and compliance cases. Detected changes are treated as candidates for review, not automatically as confirmed violations.
+
+The intended contributions are:
+\begin{itemize}
+\item A hybrid architecture combining semantic NLP analysis with deterministic compliance rules.
+\item Evidence-linked structured outputs to support auditor verification.
+\item A dependency-aware workflow mapping changed obligations to affected controls and cases.
+\item An evaluation plan comparing selective re-audit strategies with full re-audit and simpler baselines.
+\end{itemize}
+
+\section{Problem Statement}
+Financial institutions must ensure that large volumes of unstructured documents comply with complex and frequently changing frameworks such as KYC and AML. Manual auditing does not scale well and is vulnerable to delay and inconsistency. Standalone machine-learning systems may identify semantic patterns but fail to enforce non-negotiable requirements. LLM-based systems can interpret varied language but may generate unsupported statements or overlook precise constraints.
+
+The problem is to design an NLP-based framework that identifies relevant text, extracts obligations, validates mandatory requirements through explicit rules, links decisions to supporting evidence, and traces regulatory changes to affected controls and cases. The framework should reduce avoidable review effort without concealing uncertainty or replacing accountable human decision-making.
+
+\section{Literature Survey}
+Research relevant to automated compliance auditing spans AI-assisted auditing, domain-adapted transformers, LLM auditing, retrieval-augmented generation (RAG), rule-based verification, financial risk analysis, and financial-text classification. The summaries below are based on the supplied literature notes. Bibliographic details and reported metrics must be verified against the original publications before submission.
+
+\subsection{AI-Assisted Auditing and Hybrid Compliance}
+Gandhi \cite{gandhi2023} describes an AI-driven audit approach combining transformer-based NLP, anomaly detection, graph learning, ensemble classification, explainability, and rule-based evidence mapping. The supplied notes report an F1-score of 0.88 for clause identification and an AUC of 0.92 for anomaly detection. The approach illustrates the potential of combining semantic analysis with traceable evidence, but depends on data quality, computational resources, and evaluation across jurisdictions.
+
+Buddhadev \emph{et al.} \cite{buddhadev2025} propose an LLM- and LangChain-based approach for auditing unstructured data, combining OCR, text classifiers, semantic matching, and RAG. It targets scanned and text-based documents and automated report generation. OCR errors, sensitive-data handling, computational cost, and transferability beyond the evaluated banking data remain concerns.
+
+Xu \emph{et al.} \cite{xu2025} investigate BERT-based audit report generation and compliance analysis. Their approach combines transformer representations, report generation, and classification. The supplied notes describe strong reported results but also note degradation under substantial text noise and a reliance on unimodal text.
+
+Osei-Asiamah \emph{et al.} \cite{oseiasiamah2025} describe a hybrid Legal BERT and rule-engine approach. A semantic classifier evaluates clauses, while deterministic checks enforce requirements such as thresholds, deadlines, and mandatory fields. Explicit rule violations can override the model prediction. This is closely related to the hybrid principle adopted here; however, comprehensive rule design requires domain expertise, and recall depends on rule coverage.
+
+\subsection{Domain-Specific Transformers and Financial Text}
+Zafar \cite{zafar2026} presents a domain-specific BERT model for identifying AI disclosures in Islamic banking reports. The supplied notes report an F1-score of 0.9868, but the task is limited to English-language binary classification and a relatively small annotated corpus. Results should not be compared directly with compliance-auditing results unless datasets, labels, and protocols are comparable.
+
+Cheng \cite{cheng2024} studies corporate financial-statement fraud detection using correlated topic features. BERT representations and weighted correlated topic modelling are combined with conventional classifiers and imbalance handling. The work highlights the value of contextual representations and structured features, although generalization may be affected by the small proportion of fraud examples and dataset-specific weighting choices.
+
+Coffie \emph{et al.} \cite{coffie2025} compare sentence embeddings with TF--IDF for predicting numeric financial key performance indicators from text. Their notes report that TF--IDF outperformed the tested embedding approach in that setting, emphasizing that more complex semantic representations do not necessarily outperform lexical baselines on every task.
+
+Talathi \emph{et al.} \cite{talathi2026} compare transformer models for financial sensitivity detection using a synthetic dataset and four sensitivity categories. The supplied notes report that FinBERT achieved the strongest F1-score, while DistilBERT offered an efficiency advantage. Synthetic data and fixed sequence lengths limit claims about real-world generalization. This motivates evaluating the project's FinBERT checkpoint on independently labelled compliance data rather than assuming another task's results transfer directly.
+
+\subsection{LLM Auditing, Retrieval, and Evidence Grounding}
+Mökander \emph{et al.} \cite{mokander2023} propose a three-layered approach to auditing LLMs, covering governance, model, and application audits. The work frames auditing as an ongoing process involving risk assessment and monitoring, though implementation can require independent auditors, system access, and substantial resources.
+
+Cosentino \emph{et al.} \cite{cosentino2026} describe an auditable LLM--RAG architecture for financial document intelligence, combining dense and sparse retrieval, re-ranking, entity recognition, structured-output validation, and groundedness checks. These techniques can improve evidence traceability, but remain dependent on retrieval quality and introduce computational costs.
+
+Mehta \emph{et al.} \cite{mehta2025} present Finalyze, a RAG-based financial document analysis framework using chunking, embeddings, vector search, and a local LLM. Fixed context windows and retrieval errors can still result in unsupported generation.
+
+Darji \emph{et al.} \cite{darji2024} investigate RAG-based LLMs for financial risk analysis. Their pipeline retrieves related reports and risk statements to ground generation. The work supports retrieval as a grounding strategy, while low retrieval depth and answer-relevance limitations remain concerns.
+
+Sedov and Lazarev \cite{sedov2024} describe an LLM-assisted digest that synthesizes financial and research insights from article titles and abstracts. It demonstrates the utility of LLMs for organizing large text collections, but title-and-abstract-only input can omit important details, and a lack of quantitative evaluation makes summary reliability difficult to assess.
+
+\subsection{Policy Compliance and Related NLP Tasks}
+Simbola \emph{et al.} \cite{simbola2026} investigate LLM-driven compliance checking of natural-language policies against structured data-product descriptors. Structured prompting, parsing, and constrained outputs support automated verification. The supplied notes report that complex logical reasoning remains challenging, supporting the need for deterministic validation and human review.
+
+Overall, prior work suggests that transformers support semantic classification, RAG can provide contextual evidence, and explicit rules can enforce hard constraints. However, results vary by dataset and task, and metrics from different settings are not directly comparable. The proposed framework combines these techniques while explicitly representing evidence, uncertainty, and dependencies between regulatory obligations and operational controls.
+
+\section{Research Gap}
+The reviewed studies motivate several research questions:
+\begin{itemize}
+\item \textbf{Semantic flexibility versus strict enforcement:} semantic models interpret varied wording, while mandatory requirements need explicit checks.
+\item \textbf{Evidence traceability:} decisions should link to source passages and rule outcomes for verification.
+\item \textbf{Regulatory change impact:} identifying textual amendments is insufficient without determining which obligations, controls, and cases may be affected.
+\item \textbf{Selective re-audit safety:} review reduction must be evaluated against missed-violation risk, especially for high-severity cases.
+\item \textbf{Generalization:} independent test data and clear baselines are needed because results across datasets, taxonomies, and jurisdictions are not directly comparable.
+\end{itemize}
+
+\section{Proposed Framework}
+The framework comprises five cooperating components.
+
+\subsection{Document Processing}
+Input documents are converted to machine-readable text. Text PDFs can be extracted directly, while scanned documents may require OCR. Source identifiers and, where available, page and passage locations are preserved. Extraction failures and OCR uncertainty should be recorded because corrupted text can affect later predictions.
+
+\subsection{FinBERT-Based Classification}
+A fine-tuned FinBERT checkpoint classifies text according to the label taxonomy used during project training. Its output is a probabilistic signal, not a definitive legal decision. The label mapping, training-data provenance, and class-level precision, recall, and F1-score must be documented. If the model was not trained on compliance-specific labels, its predictions must not be described as compliance verdicts.
+
+\subsection{LLM-Assisted Obligation Extraction}
+An LLM extracts structured fields such as responsible entity, required action, scope, conditions, exceptions, deadlines, and evidence passage. Outputs are schema-validated, and evidence quotes are checked against source text where possible. Missing evidence, ambiguity, or inconsistent fields are flagged for review rather than silently accepted.
+
+\subsection{Deterministic Rule Validation}
+Explicit requirements are encoded as rules, including mandatory documents, deadlines, thresholds, and required checks. The engine records the rule identifier, observed evidence, outcome, and explanation. A rule violation can trigger review even when the model produces a different prediction. Rules should be versioned and linked to their source regulation.
+
+\subsection{Dependency-Aware Regulatory Transition}
+DART compares structured obligations across regulatory versions. Candidate changes are mapped to control identifiers in a directed dependency graph. Graph traversal identifies downstream controls and cases that may be affected. A risk-aware selector prioritizes cases for re-audit, while mandatory and uncertain cases remain eligible for human review. A missing obligation in an excerpt must not automatically be interpreted as repeal; source completeness, effective date, and legal status must first be established.
+
+\subsection{Auditable Output}
+Outputs include the predicted class, extracted obligation, rule outcomes, supporting evidence, change category, affected controls, selected cases, uncertainty flags, and review status. They assist auditors and are not autonomous legal determinations.
+
+\section{Evaluation Methodology}
+Evaluation should use independently labelled data and split by document or time to prevent leakage. Label definitions, regulatory versions, and effective dates should be recorded.
+
+\subsection{FinBERT Evaluation}
+For classification, report precision, recall, F1-score, macro-F1, and a confusion matrix. For imbalanced classes, emphasize macro-F1 and per-class recall alongside accuracy. If confidence values prioritize review, evaluate calibration separately.
+
+\subsection{Change Detection Evaluation}
+Evaluate obligation extraction and change detection against human-annotated references. Measures may include field-level precision and recall, evidence-quote validity, change-type accuracy, and the rate of unresolved or incorrectly resolved changes. Document the annotation process and adjudicate disagreements.
+
+\subsection{Selective Re-Audit Evaluation}
+Compare full re-audit, text-difference selection, semantic change detection without graph propagation, dependency-aware impact-first selection, and hybrid selection with risk thresholds and mandatory-review safeguards. Report immediate review rate, manual-triage volume, affected-case recall, missed high-severity violations, runtime, and reviewer effort. Review-volume reduction alone is not sufficient if affected or high-risk cases are missed. Choose thresholds on validation data and evaluate on a held-out test set.
+
+\section{Limitations and Responsible Use}
+LLM outputs can be incomplete or unsupported, and FinBERT predictions may be miscalibrated or outside the training distribution. OCR errors can corrupt evidence. Rule engines require maintenance, and dependency graphs may be incomplete. Regulatory sources must be checked for authenticity, effective dates, amendments, and withdrawal status before making compliance claims.
+
+Synthetic demonstrations can test software behaviour but cannot establish real-world compliance accuracy. The framework should preserve source evidence, record model and rule versions, protect confidential documents, and route uncertain or high-impact decisions to qualified human reviewers.
+
+\section{Conclusion}
+This paper proposes a hybrid NLP-based framework for financial-document compliance auditing that combines FinBERT classification, LLM-assisted obligation extraction, deterministic rule validation, evidence traceability, and DART-based regulatory impact propagation. The design uses semantic models for language flexibility while retaining explicit rules and human oversight for mandatory requirements. DART aims to focus re-audit effort on cases potentially affected by regulatory changes. Future work should validate the framework on independently labelled data, compare it with meaningful baselines, and measure both review-effort reduction and missed-violation risk. Quantitative performance claims should be included only after reproducible experiments.
+
+\begin{thebibliography}{99}
+\bibitem{gandhi2023} S. T. Gandhi, ``AI-Driven Compliance Audits: Enhancing Regulatory Adherence in Financial and Legal Sectors,'' \emph{International Journal of Advanced Research in Computer Science \& Technology}, vol. 6, no. 5, pp. 8981--8988, 2023. Verify metadata and metrics.
+\bibitem{zafar2026} M. B. Zafar, ``A Domain Specific BERT Model for Identifying AI Disclosures in Islamic Banking,'' \emph{Discover Analytics}, vol. 4, no. 1, article 12, 2026. Verify metadata and metrics.
+\bibitem{mokander2023} J. Mökander, J. Schuett, H. R. Kirk, and L. Floridi, ``Auditing large language models: a three-layered approach,'' \emph{AI and Ethics}, vol. 4, no. 4, 2023. Verify pages and DOI.
+\bibitem{cosentino2026} C. Cosentino, S. Squillace, and F. Marozzo, ``An Auditable LLM-RAG Architecture for Financial Document Intelligence and Decision Support,'' \emph{Future Internet}, vol. 18, no. 6, article 284, 2026. Verify metadata and metrics.
+\bibitem{simbola2026} F. Simbola, D. Reforgiato Recupero, D. Riboni, and M. Salis, ``LLM-Driven Compliance Checking for Natural-Language Policies over Data Product Descriptors,'' \emph{Machine Learning}, vol. 115, no. 5, article 116, 2026. Verify metadata and metrics.
+\bibitem{buddhadev2025} Y. Buddhadev, H. Chitaliya, V. Kotha, D. Sankhe, P. Nasikkar, P. Kanani, and P. Rane, ``Automated Compliance Checking of Unstructured Data Using Large Language Models and Langchain,'' \emph{Mathematical Modelling of Engineering Problems}, vol. 12, no. 9, 2025. Add pages or DOI.
+\bibitem{xu2025} Z. Xu, Y. Sheng, Q. Bao, D. Xu, X. Guo, and Z. Liu, ``BERT-Based Automatic Audit Report Generation and Compliance Analysis,'' in \emph{Proc. 2025 5th Int. Conf. on Artificial Intelligence and Industrial Technology Applications (AIITA)}, 2025, pp. 1233--1237. Verify proceedings metadata.
+\bibitem{oseiasiamah2025} J. Osei-Asiamah, N. K. Bhasin, R. Kaur, I. Muda, S. G., and A. A. R. S. Rajasree, ``Hybrid Legal BERT and Rule Engine Model for Compliance Monitoring in Financial Regulatory Frameworks,'' in \emph{Proc. 2025 Int. Conf. on Artificial Intelligence and Quantum Computation-Based Sensor Application (ICAIQSA)}, Nagpur, India, 2025. Verify author names, pages, and DOI.
+\bibitem{mehta2025} S. Mehta, T. Negandhi, and S. Ghane, ``Finalyze: A RAG-Based Framework for Intelligent Financial Document Analysis,'' in \emph{Proc. 2025 5th Int. Conf. on Emerging Research in Electronics, Computer Science and Technology (ICERECT)}, 2025, pp. 1--5. Verify proceedings metadata.
+\bibitem{darji2024} A. Darji, F. Kheni, D. Chodvadia, P. Goel, D. Garg, and B. Patel, ``Enhancing Financial Risk Analysis using RAG-based Large Language Models,'' in \emph{Proc. 2024 3rd Int. Conf. on Automation, Computing and Renewable Systems (ICACRS)}, Pudukkottai, India, 2024. Add pages or DOI.
+\bibitem{cheng2024} C.-H. Cheng, ``A Corporate Financial Statement Fraud Model Based on Extracting Correlated Topic Features,'' in \emph{Proc. 2024 9th Int. Conf. on Big Data Analytics (ICBDA)}, Tokyo, Japan, 2024. Add pages or DOI.
+\bibitem{coffie2025} L. Coffie, M. Ajuluchukwu, and M. Nsor, ``Predicting Numeric Financial KPIs From Unstructured Text: A Comparative Study of LLM-Based Embeddings and Traditional NLP Techniques,'' in \emph{Proc. 2025 IEEE/ACIS 29th Int. Conf. on Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing (SNPD)}, Busan, Republic of Korea, 2025. Verify pages and DOI.
+\bibitem{sedov2024} D. Sedov and A. Lazarev, ``Large Language Model for Financial Insights: Building a Digest to Simplify Research Activities,'' 2024. Add venue and DOI or repository details.
+\bibitem{talathi2026} D. Talathi, G. Patil, and S. Kelkar, ``Comparative Analysis of Transformer Models for Financial Sensitivity Detection,'' in \emph{Proc. 2026 4th Int. Conf. on Inventive Computing and Informatics (ICICI)}, Bangalore, India, 2026. Verify proceedings metadata.
+\end{thebibliography}
+\end{document}
