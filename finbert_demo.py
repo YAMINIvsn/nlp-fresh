@@ -153,4 +153,3 @@ st.warning(
     "Research demonstration only. Verify model labels and "
     "performance before using predictions in compliance decisions."
 )
-
